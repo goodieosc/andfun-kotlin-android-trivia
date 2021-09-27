@@ -35,8 +35,6 @@ class MainActivity : AppCompatActivity() {
         val navVontroller = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this,navVontroller)
 
-
-
     }
 
     //On screen navigate up button
