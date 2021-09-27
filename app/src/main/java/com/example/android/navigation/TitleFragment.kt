@@ -21,8 +21,9 @@ class TitleFragment : Fragment(){
 
         val binding: FragmentTitleBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_title,container, false)
 
-        binding.playButton.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
+        binding.playButton.setOnClickListener { v: View ->
+            v.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
+        }
 
         //Overflow Menu button
         setHasOptionsMenu(true)
@@ -35,6 +36,8 @@ class TitleFragment : Fragment(){
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.overflow_menu, menu)
     }
+
+
 
     //Overflow Menu button
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
